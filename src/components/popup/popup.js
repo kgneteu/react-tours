@@ -1,12 +1,13 @@
-
+import img8 from './../../img/nat-8.jpg'
+import img9 from './../../img/nat-9.jpg'
 const Popup = () => {
     return (
         <div>
             <div className="popup" id="popup">
                 <div className="popup__content">
                     <div className="popup__left">
-                        <img src="img/nat-8.jpg" alt="Tour photo" className="popup__img"/>
-                        <img src="img/nat-9.jpg" alt="Tour photo" className="popup__img"/>
+                        <img src={img8} alt="Tour photo 1" className="popup__img"/>
+                        <img src={img9} alt="Tour photo 2" className="popup__img"/>
                     </div>
                     <div className="popup__right">
                         <a href="#section-tours" className="popup__close">&times;</a>

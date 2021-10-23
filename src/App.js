@@ -19,11 +19,11 @@ function App() {
                 <About/>
                 <Features/>
                 <Tours/>
-                {/*<Stories/>*/}
-                {/*<Book/>*/}
+                <Stories/>
+                <Book/>
             </main>
-            {/*<Footer/>*/}
-            {/*<Popup/>*/}
+            <Footer/>
+            <Popup/>
         </div>
     );
 }

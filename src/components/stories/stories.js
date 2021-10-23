@@ -1,10 +1,40 @@
+import classes from "./stories.module.scss";
+import video1 from './../../img/video.mp4'
+import video2 from './../../img/video.webm'
+import {useState} from "react";
+
+const Story = ({title, person, children, img}) => {
+    console.log(img)
+    const [imgURL, setImgURL] = useState('')
+    import(`./../../img/${img}`)
+        .then(image => {
+            setImgURL(image)
+        })
+
+    return (
+        <div className={classes.story}>
+            <figure className={classes.story__shape}>
+                <img src={imgURL}
+                     alt={`${person} - on a tour`}
+                     className={classes.story__img}/>
+                <figcaption className={classes.story__caption}>{person}</figcaption>
+            </figure>
+            <div className={classes.story__text}>
+                <h3 className="heading-tertiary u-margin-bottom-small">{title}</h3>
+                <p>
+                    {children}
+                </p>
+            </div>
+        </div>)
+};
+
 const Stories = (props) => {
     return (
-        <section className="section-stories">
+        <section className={classes.section_stories}>
             <div className="bg-video">
                 <video className="bg-video__content" autoPlay muted loop>
-                    <source src="img/video.mp4" type="video/mp4"/>
-                    <source src="img/video.webm" type="video/webm"/>
+                    <source src={video1} type="video/mp4"/>
+                    <source src={video2} type="video/webm"/>
                     Your browser is not supported!
                 </video>
             </div>
@@ -16,43 +46,29 @@ const Stories = (props) => {
             </div>
 
             <div className="row">
-                <div className="story">
-                    <figure className="story__shape">
-                        <img src="img/nat-8.jpg" alt="Person on a tour" className="story__img"/>
-                        <figcaption className="story__caption">Mary Smith</figcaption>
-                    </figure>
-                    <div className="story__text">
-                        <h3 className="heading-tertiary u-margin-bottom-small">I had the best week ever with my
-                            family</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente
-                            aspernatur libero repellat quis consequatur
-                            ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente
-                            aspernatur libero
-                            repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui.
-                        </p>
-                    </div>
-                </div>
+                <Story title={'I had the best week ever with my family'}
+                       person={'Mary Smith'}
+                       img={'nat-8.jpg'}
+                >
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente
+                    aspernatur libero repellat quis consequatur
+                    ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente
+                    aspernatur libero
+                    repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui.
+                </Story>
             </div>
 
             <div className="row">
-                <div className="story">
-                    <figure className="story__shape">
-                        <img src="img/nat-9.jpg" alt="Person on a tour" className="story__img"/>
-                        <figcaption className="story__caption">Jack Wilson</figcaption>
-                    </figure>
-                    <div className="story__text">
-                        <h3 className="heading-tertiary u-margin-bottom-small">WOW! My life is completely
-                            different now</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente
-                            aspernatur libero repellat quis consequatur
-                            ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente
-                            aspernatur libero
-                            repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui.
-                        </p>
-                    </div>
-                </div>
+                <Story title={'WOW! My life is completely different now'}
+                       person={'Jack Wilson'}
+                       img={'nat-9.jpg'}
+                >
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente
+                    aspernatur libero repellat quis consequatur
+                    ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente
+                    aspernatur libero
+                    repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui.
+                </Story>
             </div>
 
             <div className="u-center-text u-margin-top-huge">
