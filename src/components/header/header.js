@@ -1,6 +1,14 @@
 import classes from "./header.module.scss";
 import headerLogo from "./../../img/logo-white.png";
 
+function HeaderLink({id, title, link}) {
+    return <li className={classes.navigation__item}>
+        <a href={link} className={classes.navigation__link}>
+            <span>{id}</span>
+            {title}
+        </a></li>;
+}
+
 const Header = () => {
     return (
         <div>
@@ -15,16 +23,11 @@ const Header = () => {
 
                 <nav className={classes.navigation__nav}>
                     <ul className={classes.navigation__list}>
-                        <li className={classes.navigation__item}><a href="#" className={classes.navigation__link}><span>01</span>About
-                            Natous</a></li>
-                        <li className={classes.navigation__item}><a href="#" className={classes.navigation__link}><span>02</span>Your
-                            benfits</a></li>
-                        <li className={classes.navigation__item}><a href="#" className={classes.navigation__link}><span>03</span>Popular
-                            tours</a></li>
-                        <li className={classes.navigation__item}><a href="#" className={classes.navigation__link}><span>04</span>Stories</a>
-                        </li>
-                        <li className={classes.navigation__item}><a href="#" className={classes.navigation__link}><span>05</span>Book
-                            now</a></li>
+                        <HeaderLink id={'01'} title={'About Natours'} link={"#"}/>
+                        <HeaderLink id={'02'} title={'Your benefits'} link={"#"}/>
+                        <HeaderLink id={'03'} title={'Popular tours'} link={"#"}/>
+                        <HeaderLink id={'04'} title={'Stories'} link={"#"}/>
+                        <HeaderLink id={'05'} title={'Book now'} link={"#"}/>
                     </ul>
                 </nav>
             </div>

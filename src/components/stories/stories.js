@@ -1,16 +1,9 @@
 import classes from "./stories.module.scss";
 import video1 from './../../img/video.mp4'
 import video2 from './../../img/video.webm'
-import {useState} from "react";
 
 const Story = ({title, person, children, img}) => {
-    console.log(img)
-    const [imgURL, setImgURL] = useState('')
-    import(`./../../img/${img}`)
-        .then(image => {
-            setImgURL(image)
-        })
-
+    const imgURL=require(`./../../img/${img}`).default;
     return (
         <div className={classes.story}>
             <figure className={classes.story__shape}>
@@ -28,7 +21,7 @@ const Story = ({title, person, children, img}) => {
         </div>)
 };
 
-const Stories = (props) => {
+const Stories = () => {
     return (
         <section className={classes.section_stories}>
             <div className="bg-video">
@@ -72,7 +65,7 @@ const Stories = (props) => {
             </div>
 
             <div className="u-center-text u-margin-top-huge">
-                <a href="#" className="btn-text">Read all stories &rarr;</a>
+                <a href="/#" className="btn-text">Read all stories &rarr;</a>
             </div>
         </section>
     );
