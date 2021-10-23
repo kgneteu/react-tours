@@ -28,7 +28,7 @@ const Book = () => {
                                 <div className="form__radio-group">
                                     <input type="radio" className="form__radio-input" id="small" name="size"/>
                                     <label htmlFor="small" className="form__radio-label">
-                                        <span className="form__radio-button"></span>
+                                        <span className="form__radio-button"/>
                                         Small tour group
                                     </label>
                                 </div>
@@ -36,7 +36,7 @@ const Book = () => {
                                 <div className="form__radio-group">
                                     <input type="radio" className="form__radio-input" id="large" name="size"/>
                                     <label htmlFor="large" className="form__radio-label">
-                                        <span className="form__radio-button"></span>
+                                        <span className="form__radio-button"/>
                                         Large tour group
                                     </label>
                                 </div>

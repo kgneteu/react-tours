@@ -2,7 +2,7 @@ import classes from "./features.module.scss"
 
 const FeatureBox = ({title, children, icon}) => (
     <div className={classes["feature_box"]}>
-        <i className={`${classes.feature_box__icon} ${icon}`}></i>
+        <i className={`${classes.feature_box__icon} ${icon}`}/>
         <h3 className="heading-tertiary u-margin-bottom-small">{title}</h3>
         <p className="feature-box__text">
             {children}
