@@ -1,8 +1,8 @@
 import classes from "./footer.module.scss";
-import footerLogo2 from './../../img/logo-green-2x.png'
-import footerLogo1 from './../../img/logo-green-1x.png'
-import smallFooterLogo2 from './../../img/logo-green-small-2x.png'
-import smallFooterLogo1 from './../../img/logo-green-small-1x.png'
+import footerLogo2 from '../../assets/img/logo-green-2x.png'
+import footerLogo1 from '../../assets/img/logo-green-1x.png'
+import smallFooterLogo2 from '../../assets/img/logo-green-small-2x.png'
+import smallFooterLogo1 from '../../assets/img/logo-green-small-1x.png'
 
 const FooterLink = ({title, link}) => <li className={classes.footer__item}>
     <a href={link} className={classes.footer__link}>{title}</a>

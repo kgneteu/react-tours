@@ -1,10 +1,10 @@
 import classes from "./about.module.scss";
-import smallImg1 from './../../img/nat-1.jpg'
-import largeImg1 from './../../img/nat-1-large.jpg';
-import smallImg2 from './../../img/nat-2.jpg'
-import largeImg2 from './../../img/nat-2-large.jpg';
-import smallImg3 from './../../img/nat-3.jpg'
-import largeImg3 from './../../img/nat-3-large.jpg';
+import smallImg1 from '../../assets/img/nat-1.jpg'
+import largeImg1 from '../../assets/img/nat-1-large.jpg';
+import smallImg2 from '../../assets/img/nat-2.jpg'
+import largeImg2 from '../../assets/img/nat-2-large.jpg';
+import smallImg3 from '../../assets/img/nat-3.jpg'
+import largeImg3 from '../../assets/img/nat-3-large.jpg';
 
 
 function AboutSection({title, children}) {

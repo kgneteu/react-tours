@@ -1,5 +1,5 @@
 import classes from "./header.module.scss";
-import headerLogo from "./../../img/logo-white.png";
+import headerLogo from "../../assets/img/logo-white.png";
 
 function HeaderLink({id, title, link}) {
     return <li className={classes.navigation__item}>

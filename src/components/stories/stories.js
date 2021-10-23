@@ -1,9 +1,9 @@
 import classes from "./stories.module.scss";
-import video1 from './../../img/video.mp4'
-import video2 from './../../img/video.webm'
+import video1 from '../../assets/img/video.mp4'
+import video2 from '../../assets/img/video.webm'
 
 const Story = ({title, person, children, img}) => {
-    const imgURL=require(`./../../img/${img}`).default;
+    const imgURL=require(`../../assets/img/${img}`).default;
     return (
         <div className={classes.story}>
             <figure className={classes.story__shape}>

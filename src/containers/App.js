@@ -8,8 +8,8 @@ import Book from "../components/book/book";
 import Footer from "../components/footer/footer";
 import Popup from "../components/popup/popup";
 
-import '../sass/main.scss'
-import '../css/icon-font.css'
+import '../styles/sass/main.scss'
+import '../styles/css/icon-font.css'
 
 function App() {
     return (

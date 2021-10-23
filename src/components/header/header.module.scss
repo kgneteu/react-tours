@@ -1,4 +1,4 @@
-@import "./../../sass/style.scss";
+@import "../../styles/sass/style";
 .navigation {
     &__checkbox {
         display: none;
@@ -171,7 +171,7 @@
                     to right bottom,
                     rgba($color-primary-light, 0.8),
                     rgba($color-primary-dark, 0.8)),
-    url(./../../img/hero-small.jpg);
+    url(../../assets/img/hero-small.jpg);
     background-size: cover;
     background-position: top;
     position: relative;
@@ -190,7 +190,7 @@
                         to right bottom,
                         rgba($color-primary-light, 0.8),
                         rgba($color-primary-dark, 0.8)),
-        url(./../../img/hero.jpg);
+        url(../../assets/img/hero.jpg);
     }
 
     @include respond(phone) {

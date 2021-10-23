@@ -1,5 +1,5 @@
-import img8 from './../../img/nat-8.jpg'
-import img9 from './../../img/nat-9.jpg'
+import img8 from '../../assets/img/nat-8.jpg'
+import img9 from '../../assets/img/nat-9.jpg'
 const Popup = () => {
     return (
         <div>
